@@ -1,7 +1,11 @@
 package io.zipcoder;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class StudentTest {
 
@@ -26,33 +30,35 @@ public class StudentTest {
     public void setExamScore() {
     }
 
+
     @Test
     public void getAverageExamScore() {
     }
 
+
     @Test
     public void displayAverageExamScore() {
     }
+
 
     @Test
     public void testToString() {
 
         //Given
         String firstName = "Tra";
-        String LastName = " DIE";
-        Double [] examScores= {70.00, 120.00, 80.00};
-        double expected = 90.00;
+        String lastName = " DIE";
+        ArrayList <Double> examScores= new ArrayList<>(Arrays.asList(70.0,120.0, 80.0));
+        Student student = new Student (firstName,lastName, examScores );
+
+        String expected = "Student Name : Tra DIE\n" + " Average Score : 90.0 \n" + " Exam Scores:\n" +
+            "\t Exam 1 -> 70\n" + "\t Exam 2 -> 120\n" + "\t Exam 3 -> 80\n";
 
         // When
 
-        double actual =
-
+        String actual = student.toString();
 
         // Then
-
-
-
-
+        Assert.assertEquals(expected, actual);
 
 
     }
