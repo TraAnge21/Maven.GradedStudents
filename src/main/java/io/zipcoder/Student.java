@@ -51,6 +51,10 @@ public class Student {
 
     }
 
+
+
+
+
     public void addExamScore(double examScore) {
 
         this.examScores.add(examScore);
@@ -65,7 +69,7 @@ public class Student {
 
 
     public Double  getAverageExamScore() {
-        Double sumScore = 0.0;
+        Double sumScore = 0.00;
         for (int j = 0; j < this.examScores.size(); j++) {
             sumScore+=this.examScores.get(j);
         }
@@ -90,18 +94,12 @@ public class Student {
 
     @Override
     public String toString() {
-//        return "Student {" +
-//                "firstName='" + firstName + '\'' +
-//
-//                ", lastName='" + lastName + '\'' +
-//
-//                ", examScores=" + examScores +
-//
-//                '}';
 
-        return "Student " +
-                "Student Name : " + getFirstName() + " " + getLastName() + "\n Average Score : " + getAverageExamScore() +
-                "\n Exam Scores : \n" + getExamScores();
+        return "Student Name : " + getFirstName()
+                + " "
+                +  getLastName()
+                + "\n Average Score : " + getAverageExamScore()
+                + "  \n" + getExamScores();
 
     }
 
