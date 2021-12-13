@@ -53,19 +53,20 @@ public class Student {
 
 
 
-
-
+    
     public void addExamScore(double examScore) {
 
         this.examScores.add(examScore);
     }
 
 
-    public void setExamScore(int examNumber, double newScore) {
+    public String  setExamScore(int examNumber, double newScore) {
 
-        this.examScores.set(examNumber, newScore);
+        examScores.set(examNumber, newScore);
+        return "Exam " + (examNumber+1) + "-> " + newScore;
 
     }
+
 
 
     public Double  getAverageExamScore() {
